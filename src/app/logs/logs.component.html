@@ -1,0 +1,12 @@
+<h3>Udemy assignment 3</h3>
+<button (click)="toggleDetails()">Display details</button>
+<p *ngIf="showDetails">Deltarune - Rude buster</p>
+<ul>
+  <li
+    *ngFor="let log of logs; index as logNumber"
+    [ngStyle]="{ backgroundColor: getLogColor(logNumber) }"
+    [ngClass]="{ lateLog: isLogLate(logNumber) }"
+  >
+    {{ log }}
+  </li>
+</ul>
